@@ -1,0 +1,79 @@
+@import 'static/stylesScss/variable.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  font: 400 14px $rb, sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: $grey5;
+}
+
+input {
+  &.hidden {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+p {
+  line-height: 24px;
+}
+
+body {
+  background: $grey8;
+  &.no-scroll {
+    overflow: hidden;
+    pointer-events: none;
+  }
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+  }
+  &:before {
+    background-image: url("static/img/decor/Centauri.png");
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 522px;
+    background-position: right;
+  }
+  &:after {
+    left: 0;
+    bottom: 0;
+    height: 300px;
+    width: 326px;
+    background-image: url("static/img/decor/centauri-2.svg");
+    background-position: left bottom;
+  }
+}
+
+.wrap {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
