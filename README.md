@@ -1,0 +1,1 @@
+# vue-nuxt_slots-partners
